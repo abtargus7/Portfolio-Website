@@ -1,4 +1,7 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
+import axios from "axios"
 import {FiDownload} from 'react-icons/fi'
 
 //components
@@ -8,6 +11,11 @@ import Stats from "@/components/Stats"
 
 
 const Home = () => {
+
+  const downloadCV = async() => {
+    window.location.href = "https://cloud.appwrite.io/v1/storage/buckets/6798738100064f37f961/files/6798739d003e7efbcce9/view?project=679856db0007bfb500e0&project=679856db0007bfb500e0&mode=admin"
+  }
+
   return (
     <section className="h-full ">
       <div className="container mx-auto h-full">
@@ -19,10 +27,11 @@ const Home = () => {
             <p className="max-w-[500px] mb-9 text-white/80">I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.</p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8 ">
-              <Button 
+              <Button  
                 variant="outline" 
                 size="lg" 
                 className="uppercase flex items-center gap-2"
+                onClick={downloadCV}
               >
                 <span>Download CV</span>
                 <FiDownload  className="text-xl "/>
