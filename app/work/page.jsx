@@ -18,41 +18,57 @@ import Image from 'next/image'
 const projects = [
   {
     num: "01",
-    category: 'frontend',
-    title: 'Portfolio',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vitae tempore earum numquam beatae voluptatem, libero dolor blanditiis fuga reprehenderit? Omnis, maiores incidunt.",
+    category: 'Fullstack',
+    title: 'Huwistyle E-Commerce Platform',
+    description: "Huwistyle Apparel is an e-commerce platform specializing in fashion and lifestyle products. The project included user authentication, product management, order processing, and payment integration.",
     stack: [
       {
-        name: "Html 5"
+        name: "React"
       },
       {
-        name: 'CSS 3'
+        name: 'Node'
       },
       {
-        name: 'JavaScript'
+        name: 'Express'
+      },
+      {
+        name: 'MongoDB'
+      },
+      {
+        name: 'Tailwind CSS'
+      },
+      {
+        name: 'Redux-Toolkit'
       },
     ],
-    image: '/work/thumb1.png',
+    image: '/work/huwistyle.png',
     live: '',
     github: ""
   },
   {
     num: "02",
-    category: 'frontend',
-    title: 'Portfolio',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vitae tempore earum numquam beatae voluptatem, libero dolor blanditiis fuga reprehenderit? Omnis, maiores incidunt.",
+    category: 'Fullstack',
+    title: 'SVMS NGO Website',
+    description: "SVMS is an NGO website designed to showcase and support various initiatives for tribal communities in Shirpur tehsil. The platform highlights projects focused on education, skill development, environmental conservation, and leadership empowerment. The site also features a dynamic content management system for easy updates and scalability.",
     stack: [
       {
-        name: "Html 5"
+        name: "React"
       },
       {
-        name: 'CSS 3'
+        name: 'Node'
       },
       {
-        name: 'JavaScript'
+        name: 'Express'
       },
+      {
+        name: 'MongoDB'
+      },
+      {
+        name: 'Tailwind CSS'
+      },
+      
     ],
-    image: '/work/thumb1.png',
+    image: '/work/svms.png',
     live: '',
     github: ""
   }
@@ -80,14 +96,16 @@ const Work = () => {
               <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}</div>
               {/* project category */}
               <h2 className='text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize '>{project.category} project</h2>
+              {/* project title */}
+              <h3 className='text-2xl text-accent '>{project.title}</h3>
               {/* project description */}
               <p className='text-white/60 '>{project.description}</p>
               {/* stack */}
-              <ul className='flex gap-4 '>
+              <ul className='grid grid-cols-3 gap-y-2'>
                 {project.stack.map((item, index) => {
                   return <li key={index} className='text-xl text-accent ' >
                     {item.name}
-                    {index !== project.stack.length - 1 && ","}
+                    
                   </li>
                 })}
               </ul>
@@ -131,7 +149,7 @@ const Work = () => {
                     <div className='absolute top-0 bottom-0 w-full h-full bg-black/10'></div>
                     {/* image */}
                     <div className='relative w-full h-full'>
-                      <Image src={project.image} fill className='object-cover' alt=''/>
+                      <Image src={project.image} fill className='object-contain' alt=''/>
                     </div>
                   </div>
                 </SwiperSlide>

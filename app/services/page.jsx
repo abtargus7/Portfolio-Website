@@ -18,6 +18,12 @@ const services = [
     description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
     href: ""
   },
+  {
+    num: 3,
+    title: "DevOps",
+    description: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    href: ""
+  },
 ]
 
 const Services = () => {
